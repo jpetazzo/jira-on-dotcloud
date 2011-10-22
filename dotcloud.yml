@@ -1,0 +1,14 @@
+jira:
+  type: custom
+  buildscript: jira/builder
+  ports:
+    www: http
+
+## Uncomment this to add a MySQL database
+#jiradb:
+#  type: mysql
+
+## Or this for a PostgreSQL database
+#jiradb:
+#  type: postgresql
+

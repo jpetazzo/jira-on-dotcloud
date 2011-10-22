@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ -d ~/atlassian ]
+then
+	echo 'JIRA seems to be installed already. Skipping build.'
+else
+	echo 'Installing JIRA...'
+	curl http://dotcloud-plugins.s3.amazonaws.com/jira-4.4.3.tar.gz | 
+		tar -C ~ -zxf-
+	echo 'Installing my own files...'
+	cp -a jira/. ~
+	echo 'Done.'
+fi

@@ -1,0 +1,4 @@
+#!/bin/sh
+export JRE_HOME=/usr/lib/jvm/java-6-openjdk/
+sed -i 's/<Connector port="8080"/<Connector port="'$PORT_WWW'"/' ~/atlassian/jira/conf/server.xml
+exec ~/atlassian/jira/bin/start-jira.sh -fg
